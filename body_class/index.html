@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using a body class</title>
+    <style>
+      body {
+        color: #222;
+        background-color: #fff;
+        transition: all ease 0.4s;
+      }
+      a {
+        color: #0033cc;
+      }
+
+      body.dark-theme {
+        color: #eee;
+        background-color: #121212;
+      }
+
+      body.dark-theme a {
+        color: #809fff;
+      }
+    </style>
+  </head>
+  <body class="dark-theme light-theme">
+    <button class="btn-toggle">Toggle</button>
+    <h1>Hey there! This is just a title</h1>
+    <p>
+      I am just a boring text, existing here solely for the purpose of this demo
+    </p>
+    <p>
+      And I am just another one like the one above me, because two is better
+      than having only one
+    </p>
+    <a href="#">I am a link, don't click me!</a>
+
+    <script>
+      const btn = document.querySelector(".btn-toggle");
+      btn.addEventListener("click", function () {
+        document.body.classList.toggle("dark-theme");
+      });
+    </script>
+  </body>
+</html>
